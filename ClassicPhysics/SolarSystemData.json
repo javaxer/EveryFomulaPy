@@ -1,0 +1,23 @@
+"Solar System Data" : 
+[
+	{"Body" : "Mercury",
+	"Mass" : "3.30e+23",
+	"Mean Radius" : "2.44e+6",
+	"Period" : "7.60e+6",
+	"Mean Distance from the Sun" : "5.79e+10"
+	"한글명" : "수성"},
+
+	{"Body" : "Venus",
+	"Mass" : "4.87e+24",
+	"Mean Radius" : "6.05e+6",
+	"Period" : "1.94e+7",
+	"Mean Distance from the Sun" : "1.08e+11"
+	"한글명" : "금성"}
+
+	{"Body" : "Earth",
+	"Mass" : "5.97e+24",
+	"Mean Radius" : "2.44e+6",
+	"Period" : "7.60e+6",
+	"Mean Distance from the Sun" : "5.79e+10"
+	"한글명" : "지구"}
+]

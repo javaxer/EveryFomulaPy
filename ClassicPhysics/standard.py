@@ -1,3 +1,5 @@
+#coding:utf-8
+
 #길이의 단위와 그 전환에 대한 정의
 #내용은 모두 Serway물리 교과서 내용에서 발췌했음
 #처음에는 파일명을 Length라고 했으나 곰곰히 생각해 본 결과 정의(Standard)라고 정의하는 쪽이 더 정확할 것으로 보여 파일 명을 수정함.
@@ -9,6 +11,7 @@ class Standard:
     def get_definition(self):
         print("기준에 대한 원시 클래스")
 
+    #아래는 클레스 내부의 인스턴스 저장소
     standarad=0.0
     def set(self,number):
         self.standarad=number
@@ -18,14 +21,20 @@ class Standard:
 #SI단위계 표준 단위인 미터에 대한 정의
 class Length(Standard):
     # 1m에 대한 물리적인 정의
+    speed_of_light = 299,792,458
     def get_definition(self):
         print("1미터(m)는 진공 속에서 빛이 1/299,792,458초 동안 진행한 거리이다.")
-    def set_length(self,lenght):
+    def set_length(self,length):
         self.set(length)
 
+#아래의 클래스는 위 길이에 대한 클래스의 한글 클래스이다.
 class 길이(Length):
     def 정의(self):
         self.get_definition()
+    def 설정(self,number):
+        self.set(number)
+    def 획득(self):
+        self.get()
 
 class Mass(Standard):
     #1kg에 대한 물리적인 정의
