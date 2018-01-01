@@ -41,12 +41,29 @@ class Mass(Standard):
     def get_definition(self):
         print("1킬로그램(kg)은 프랑스 국제 도량형국에 보관되어 있는 특정한 백금-이리듐합금 실린더로 정의된다.")
 
+#아래의 클래스는 위 질량에 대한 클래스의 한글 클래스이다.
+class 질량(Mass):
+    def 정의(self):
+        self.get_definition()
+    def 설정(self,number):
+        self.set(number)
+    def 획득(self):
+        self.get()
 
 class Time(Standard):
     #1sec에 대한 물리적인 정의
     def get_definition(self):
             print("1초(sec)는 세슘 원자로 부터 방축되는 복사 진동주기의 9,1,92,631,770배이다")
-            
+
+#아래의 클래스는 위 시간에 대한 클래스의 한글 클래스이다.
+class 길이(Time):
+    def 정의(self):
+        self.get_definition()
+    def 설정(self,number):
+        self.set(number)
+    def 획득(self):
+        self.get()   
+
 class Volume:
     #부피에 대한 정의, 기초적인 산수 영역이나 아래의 밀도에 대한 정의를 위해 추가한다.
     #정육면체의 부피에 대한 공식
