@@ -1,0 +1,79 @@
+"Solar System Data" : 
+[
+	{"Body" : "Mercury","Mass" : "3.30e+23","Mean Radius" : "2.44e+6",
+	"Period" : "7.60e+6","Mean Distance from the Sun" : "5.79e+10",
+	"한글명" : "수성"},
+
+	{"Body" : "Venus","Mass" : "4.87e+24","Mean Radius" : "6.05e+6",
+	"Period" : "1.94e+7",
+	"Mean Distance from the Sun" : "1.08e+11"
+	"한글명" : "금성"},
+
+	{"Body" : "Earth",
+	"Mass" : "5.97e+24",
+	"Mean Radius" : "6.37e+6",
+	"Period" : "3.156e+7",
+	"Mean Distance from the Sun" : "1.496e+11"
+	"한글명" : "지구"},
+
+	{"Body" : "Mars",
+	"Mass" : "6.42e+23",
+	"Mean Radius" : "3.39e+6",
+	"Period" : "5.94e+7",
+	"Mean Distance from the Sun" : "2.28e+11"
+	"한글명" : "화성"},
+
+
+	{"Body" : "Jupiter",
+	"Mass" : "1.90e+27",
+	"Mean Radius" : "6.99e+7",
+	"Period" : "3.74e+8",
+	"Mean Distance from the Sun" : "7.78e+11"
+	"한글명" : "목성"},
+
+
+	{"Body" : "Satrun",
+	"Mass" : "5.68e+26",
+	"Mean Radius" : "5.82e+7",
+	"Period" : "9.29e+8",
+	"Mean Distance from the Sun" : "1.43e+12"
+	"한글명" : "토성"},
+
+
+	{"Body" : "Uranus",
+	"Mass" : "8.68e+25",
+	"Mean Radius" : "2.54e+7",
+	"Period" : "2.65e+9",
+	"Mean Distance from the Sun" : "2.87e+12"
+	"한글명" : "천왕성"},
+
+
+	{"Body" : "Neptune",
+	"Mass" : "1.02e+26",
+	"Mean Radius" : "2.46e+7",
+	"Period" : "2.65e+9",
+	"Mean Distance from the Sun" : "2.87e+12"
+	"한글명" : "해왕성"},
+
+	{"Body" : "Pluto",
+	"Mass" : "1.25e+22",
+	"Mean Radius" : "1.20e+6",
+	"Period" : "7.82e+9",
+	"Mean Distance from the Sun" : "5.91e+12"
+	"한글명" : "명왕성"},
+
+	{"Body" : "Moon",
+	"Mass" : "7.35e+22",
+	"Mean Radius" : "1.20e+6",
+	"Period" : "",
+	"Mean Distance from the Sun" : ""
+	"한글명" : "달"},
+
+	{"Body" : "Sun",
+	"Mass" : "1.989e+30",
+	"Mean Radius" : "6.96e+8",
+	"Period" : "",
+	"Mean Distance from the Sun" : ""
+	"한글명" : "태양"},
+
+]
