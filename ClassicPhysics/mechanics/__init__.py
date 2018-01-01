@@ -6,7 +6,7 @@
 
 #사용된 공식들은 '위키' 홈페이지와 '파인만의 물리학 강의' 내용을 참조하여 작성했다
 
-__all__ = []
+__all__ = ['standard','newton','vector']
 
 #패키지내 모든 모듈 import
 #from vozlwlaud import
