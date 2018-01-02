@@ -8,19 +8,19 @@ import math
 
 #기준에 대한 원시 클래스
 class Standard:
-    def __init__(self,number):
-        self.number = number
     def __init__(self):
-        self.__init__(0.0)
+        standard = 0.0
+    def __init__(self,number):
+        self.standard = number
 
     def get_definition(self):
         print("기준에 대한 원시 클래스")
 
     def set(self,number):
-        self.standarad=number
+        self.standard=number
 
     def get(self):
-        return self.standarad
+        return self.standard
 
 
 #SI단위계 표준 단위인 미터에 대한 정의
