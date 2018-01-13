@@ -9,4 +9,3 @@
 __all__ = ['measurement','newton','motion_1D','vector']
 
 #패키지내 모든 모듈 import
-#from vozlwlaud import
