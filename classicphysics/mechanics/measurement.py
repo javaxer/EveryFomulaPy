@@ -81,7 +81,7 @@ class 길이(Time):
 class Volume:
     #부피에 대한 정의, 기초적인 산수 영역이나 아래의 밀도에 대한 정의를 위해 추가한다.
     #정육면체의 부피에 대한 공식
-    def __init__(self,volume):
+    def __init__(self,volume=0):
         self.volume = volume
     def get_square_volume(self,length):
         return math.pow(length.get(),3)
@@ -89,10 +89,19 @@ class Volume:
     def get_rectengular_volume(self,length_x, length_y, length_z):
         return length_x*length_y*length_z
 
+class 부피(Volume):
+    def 설정(self,number):
+        self.set(number)
+    def 획득(self,number):
+        self.get(number)
+
 class Density:
-    def getdensity(self, m, v):
+    def getdensity(self, mass, volume):
         return m/v
 
+class 밀도(Desity):
+    def 획득(self,,number):
+        self.set(number)
 
 class DimensionalAnalysis:
     #차원 분석에 대한 클래스, 현시점에서는 검증용 외에는 별다른 용도가 없으므로 일단 통과하자
