@@ -9,9 +9,10 @@ import math
 
 #기준에 대한 원시 클래스
 class Standard:
-    #생성자 정의
-    def __init__(self, number=0.0 ):
+    #생성자 정의(number는 양, unit은 단위)
+    def __init__(self, number=0.0, unit=''):
         self.standard = number
+        self.unit = unit
 #    def __init__(self):
 #        self.standard = 0.0
 #    def __init__(self,number):
@@ -21,12 +22,17 @@ class Standard:
     def get_definition(self):
         print("기준에 대한 원시 클래스")
 
+    #양을 지정하는 메소드
     def set(self,number):
         self.standard=number
 
+    #양을 얻는 메소드
     def get(self):
         return self.standard
 
+    #단위를 얻는 메소드
+    def get_unit(self):
+        return self.unit
 
 #SI단위계 표준 단위인 미터에 대한 정의
 class Length(Standard):
