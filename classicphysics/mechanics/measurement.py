@@ -10,15 +10,11 @@ import math
 #기준에 대한 원시 클래스
 class Standard:
     #생성자 정의(number는 양, unit은 단위)
-    def __init__(self, number=0.0, unit=''):
+    def __init__(self, number=0.0, unit='unit'):
         self.standard = number
         self.unit = unit
-#    def __init__(self):
-#        self.standard = 0.0
-#    def __init__(self,number):
-#        self.standard = number
 
-
+    #기준에 대한 정의 출력(예: '길이에 대한 정의', '무게에 대한 정의' 등등)
     def get_definition(self):
         print("기준에 대한 원시 클래스")
 
@@ -38,6 +34,7 @@ class Standard:
 class Length(Standard):
     # 1m에 대한 물리적인 정의
     speed_of_light = 299792458
+
     def get_definition(self):
         print("1미터(m)는 진공 속에서 빛이 1/299,792,458초 동안 진행한 거리이다.")
     def set_length(self,length):
