@@ -12,9 +12,8 @@ import measurement
 #위치
 class Position_1D:
     #생성자 (첫 위치 0.0
-    def __init__(self,x_f=0.0,x_i=0.0,time = 0.0,unit='m'):
-        self.x_f=measurement.Length(x_f)        #첫번째 위치
-        self.x_i=measurement.Length(x_i)        #차후 위치
+    def __init__(self,x=0.0,unit='m'):
+        self.x=measurement.Length(x)        #1차원 상의 위치
         self.time = measurement.Time(time)  #시간
         self.unit=unit      #단위(기본은 메타(m)
 
@@ -36,7 +35,8 @@ class Position_1D:
 
     def get_time(self):
         return time
-    def
+    def set_time(self,time):
+        self.time = time
 
     def get_average_velociy_1D(self):
         return self.displacement_1D(x_f,x_i)/self.time
