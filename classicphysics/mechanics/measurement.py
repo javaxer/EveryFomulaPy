@@ -1,9 +1,11 @@
 #coding:utf-8
 
-#길이의 단위와 그 전환에 대한 정의
-#내용은 모두 Serway물리 교과서 내용에서 발췌했음
-#처음에는 파일명을 Length라고 했으나 곰곰히 생각해 본 결과 정의(Standard)라고 정의하는 쪽이 더 정확할 것으로 보여
-# 파일 명을 수정함.
+'''
+길이의 단위와 그 전환에 대한 정의
+내용은 모두 Serway물리 교과서 내용에서 발췌했음
+처음에는 파일명을 Length라고 했으나 곰곰히 생각해 본 결과 정의(Standard)라고 정의하는 쪽이 더 정확할 것으로 보여
+파일 명을 수정함.
+'''
 
 import math
 
@@ -21,10 +23,15 @@ class Standard:
     #양을 지정하는 메소드
     def set(self,number):
         self.standard=number
+        self.unit=unit
 
     #양을 얻는 메소드
     def get(self):
-        return self.standard
+        return self
+
+    #단위를 설정하는 메소드
+    def set_unit(self,unit):
+        self.unit=unit
 
     #단위를 얻는 메소드
     def get_unit(self):
@@ -32,9 +39,15 @@ class Standard:
 
 #SI단위계 표준 단위인 미터에 대한 정의
 class Length(Standard):
-    # 1m에 대한 물리적인 정의
-    speed_of_light = 299792458
 
+    speed_of_light = 299792458              #광속(299,792,458 m/s)
+
+    #길이에 대한 생성자, 기본 데이타는 0.0 m
+    def __init__(self,length=0.0,unit='m'):
+        self.standard=length
+        self.unit=unit
+
+    # 1m에 대한 물리적인 정의
     def get_definition(self):
         print("1미터(m)는 진공 속에서 빛이 1/299,792,458초 동안 진행한 거리이다.")
     def set_length(self,length):
@@ -55,6 +68,10 @@ class 길이(Length):
 
 
 class Mass(Standard):
+    def __init__(self,mass,unit='kg'):
+        self.standard=mass
+        self.unit=unit
+
     #1kg에 대한 물리적인 정의
     def get_definition(self):
         print("1킬로그램(kg)은 프랑스 국제 도량형국에 보관되어 있는 특정한 백금-이리듐합금 실린더로 정의된다.")
