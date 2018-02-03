@@ -11,42 +11,47 @@ import measurement
 
 #위치
 class Position_1D:
-    #생성자 (첫 위치 0.0
-    def __init__(self,x_f=0.0,x_i=0.0,time = 0.0,unit='m'):
-        self.x_f=measurement.Length(x_f)        #첫번째 위치
-        self.x_i=measurement.Length(x_i)        #차후 위치
-        self.time = measurement.Time(time)  #시간
-        self.unit=unit      #단위(기본은 메타(m)
+    #생성자 (첫 위치 0.0, 단위 'm')
+    def __init__(self,x_f=0.0,unit='m'):
+        self.position_x=measurement.Length(x_f,unit)        #x축(1차원계)상에서의 위치 객체 생성
 
-    #
-    def set_displacement_1D(self,x_f,x_i):
-        self.x_f = x_f
-        self.x_i = x_i
-
-    def get_displacement_1D(self,x_f,x_i):
-        self.x_f=x_f
-        self.x_i=x_i
-        return x_f - x_i
+    def get_position(self):
+        return self.position_x.get_length()
 
     def get_unit(self):
-        return self.unit
+        return self.position_x.get_unit()
 
     def set_unit(self,unit):
         self.unit=unit
 
-    def get_time(self):
-        return time
-    def
+class Velocity_1D:
+
+    def __init__(self,velocity=0.0,unit="m/s"):
+        self.velocity=velocity
+        self.unit=unit
+
+    def get_displacement_1D(self,x_f,x_i):
+        self.x_f=Position_1D(x_f)
+        self.x_i=Position_1D(x_i)
+        self.displacement=self.x_f.get_position()-self.x_i.get_position()
+        return self.displacement
 
     def get_average_velociy_1D(self):
         return self.displacement_1D(x_f,x_i)/self.time
 
+
+class Speed_1D:
     def get_average_speed_1D(self,time):
         return self.get_displacement_1D()
 
 
+
+
+
+
 #등가속도 운동
 class ConstantAcceleration_1D:
+
 
 
 import unittest

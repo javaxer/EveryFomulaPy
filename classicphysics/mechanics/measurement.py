@@ -49,7 +49,7 @@ class Length(Standard):
 
     # 1m에 대한 물리적인 정의
     def get_definition(self):
-        print("1미터(m)는 진공 속에서 빛이 1/299,792,458초 동안 진행한 거리이다.")
+        print("1미터(m)는 진공 속에서 빛이 1/",self.speed_of_light,"초 동안 진행한 거리이다.")
     def set_length(self,length):
         self.set(length)
     def get_lenght(self):
