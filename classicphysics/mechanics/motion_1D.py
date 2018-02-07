@@ -25,29 +25,25 @@ class Position_1D:
         self.unit=unit
 
 class Velocity_1D:
-
+    #생성자
     def __init__(self,velocity=0.0,unit="m/s"):
         self.velocity=velocity
         self.unit=unit
 
-    def get_displacement_1D(self,x_f,x_i):
-        self.x_f=Position_1D(x_f)
-        self.x_i=Position_1D(x_i)
-        self.displacement=self.x_f.get_position()-self.x_i.get_position()
-        return self.displacement
-
-    def get_average_velociy_1D(self):
-        return self.displacement_1D(x_f,x_i)/self.time
-
+    def get_average_velociy_1D(self,timetable):
+        self.displacement = sum(timetable.keys())           #총 변위합
+        self.sum_time = sum(timetable.values())             #시간의 총합
+        self.velocity = self.displacemnet/self.sum_time
+        return self.velocity
 
 class Speed_1D:
+    #생성자
+    def __init__(self,speed=0.0,unit="m/s"):
+        self.speed = speed
+        self.unit = unit
+
     def get_average_speed_1D(self,time):
         return self.get_displacement_1D()
-
-
-
-
-
 
 #등가속도 운동
 class ConstantAcceleration_1D:
