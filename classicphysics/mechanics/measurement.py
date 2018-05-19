@@ -7,6 +7,8 @@
 파일 명을 수정함.
 '''
 
+#물리학 교과서 1장에 나오는 물리학 측정(Physics and measurement)
+
 import math
 
 #기준에 대한 원시 클래스

@@ -1,7 +1,19 @@
 #coding:utf-8
 
-#물리학 교과서 제일 처음에 나오는 백터 역학에 대한 정리
+#물리학 교과서 3장에 나오는 백터 역학에 대한 정리
 import math
+
+class CoordinateSystem:         #평면 극 좌표계(Plane polar coordinates)(r,theta)
+
+
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+
+    def get_coordinate(self):
+        r = math.sqrt(x**2+y**2)
+        theta = math.degrees(math.atan2(y,x))
+
 
 class vector:
     x,y,z=0

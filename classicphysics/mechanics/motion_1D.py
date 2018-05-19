@@ -9,7 +9,8 @@ import measurement
 중요한 것은 힘을 구성하는 성분을 분리해서 단순화 시키는 것을 생각해낸 분이 대단하단 것이지(갈릴레오 선생님?)
 '''
 
-#위치
+#2장 1차원운동(Mothin in One dimension)
+
 class Position_1D:
     #생성자 (첫 위치 0.0, 단위 'm')
     def __init__(self,x_f=0.0,unit='m'):
