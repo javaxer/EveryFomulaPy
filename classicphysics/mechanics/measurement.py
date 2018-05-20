@@ -25,11 +25,10 @@ class Standard:
     #양을 지정하는 메소드
     def set(self,number):
         self.standard=number
-        self.unit=unit
 
     #양을 얻는 메소드
     def get(self):
-        return self
+        return self.standard
 
     #단위를 설정하는 메소드
     def set_unit(self,unit):
@@ -38,6 +37,9 @@ class Standard:
     #단위를 얻는 메소드
     def get_unit(self):
         return self.unit
+
+    def __str__(self):
+        return "{} {}".format(self.standard,self.unit)
 
 #SI단위계 표준 단위인 미터에 대한 정의
 class Length(Standard):
