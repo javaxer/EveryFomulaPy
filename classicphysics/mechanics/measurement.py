@@ -38,6 +38,10 @@ class Standard:
     def get_unit(self):
         return self.unit
 
+    #합성에 대한 정의 __add__
+    def __add__(self, other):
+        pass
+
     #기본 출력 형태는 양+단위 형태이다.
     def __str__(self):
         return "{} {}".format(self.standard,self.unit)
@@ -47,7 +51,9 @@ def compare_unit(stand1,stand2):
     stand1 = Standard()
     stand2 = Standard()
     stand1_unit = stand1.get_unit()
+    print(stand1_unit)
     stand2_unit = stand2.get_unit()
+    print(stand2_unit)
     if stand1_unit == stand2_unit:
         return True
     else:
