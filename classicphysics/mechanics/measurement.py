@@ -48,8 +48,6 @@ class Standard:
 
 #단위를 비교하는 함수
 def compare_unit(stand1,stand2):
-    stand1 = Standard()
-    stand2 = Standard()
     stand1_unit = stand1.get_unit()
     print(stand1_unit)
     stand2_unit = stand2.get_unit()

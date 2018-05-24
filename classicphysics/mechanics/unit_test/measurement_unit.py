@@ -1,5 +1,5 @@
 import unittest
-import measurement
+import classicphysics.mechanics.measurement as measurement
 
 
 class Measurement_Standard_Test(unittest.TestCase):
@@ -17,7 +17,12 @@ class Measurement_Standard_Test(unittest.TestCase):
         len2 = measurement.Length(0.0)
         len2.get_definition()
         len2.set(10.0)
-        print(len1.get(), 'm')
+        print(len2.get(), 'm')
+
+    def test_compare(self):
+        len1 = measurement.Length(10.0,'m')
+        ma1 = measurement.Mass(10.0,'kg')
+        self.assertFalse(measurement.compare_unit(len1,ma1))
 
 if __name__=='__main__':
     unittest.main()
