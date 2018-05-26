@@ -13,25 +13,27 @@ class Measurement_Standard_Test(unittest.TestCase):
         len1.set(10.0)
         self.assertEqual(10.0,len1.get(),"결과정상")
 
-    def test_Length(self):
-        len2 = measurement.Length(0.0)
-        len2.get_definition()
-        len2.set(10.0)
-        print(len2.get(), 'm')
+    def test_mass(self):
+        ma1 = measurement.Mass(0.0,'kg')
+        ma1.get_definition()
+        ma1.set(10.0)
+        self.assertEqual(10.0,ma1.get(),"결과정상")
 
     def test_compare(self):
         len1 = measurement.Length(10.0,'m')
         ma1 = measurement.Mass(10.0,'kg')
         self.assertFalse(measurement.compare_unit(len1,ma1))
 
+    def 한글테스트(self):
+        길이1 = measurement.길이(10,'m')
+        길이1.정의()
+        질량1 = measurement.질량(10,'kg')
+        질량1.정의()
+
 if __name__=='__main__':
     unittest.main()
 
 
-
-
-길이1 = measurement.길이(0.0)
-길이1.정의()
 
 mass1 = measurement.Mass(0.0)
 mass1.get_definition()

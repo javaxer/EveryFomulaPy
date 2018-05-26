@@ -119,7 +119,8 @@ class 길이(Time):
     def 설정(self,number):
         self.set(number)
     def 획득(self):
-        self.get()   
+        self.get()
+
 
 
 class Volume(Standard):
