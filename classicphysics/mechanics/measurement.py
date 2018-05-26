@@ -14,6 +14,7 @@ import math
 #기준에 대한 원시 클래스
 class Standard:
     #생성자 정의(number는 양, unit은 단위)
+    #모든 물리학 값에는 단위가 있어야 한다는 배움을 기억하는가?
     def __init__(self, number=0.0, unit='unit'):
         self.standard = number
         self.unit = unit
