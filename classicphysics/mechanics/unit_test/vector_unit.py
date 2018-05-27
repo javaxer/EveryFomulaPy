@@ -7,7 +7,7 @@ class Vector_Test(unittest.TestCase):
 
     def test_get_definition(self):
         v1 = ve.CoordinateSystem(1,1)
-        v1.get_coordinate()
+        #v1.get_coordinate()
 
     '''def test_Length(self):
         len1 = measurement.Length()
@@ -27,18 +27,3 @@ class Vector_Test(unittest.TestCase):
 
 if __name__=='__main__':
     unittest.main()
-
-
-
-
-길이1 = measurement.길이(0.0)
-길이1.정의()
-
-mass1 = measurement.Mass(0.0)
-mass1.get_definition()
-mass1.set(10.0)
-print(mass1.get(),'kg')
-
-vol1 = measurement.Volume()
-print(vol1.get())
-vol1.get_square_volume(len1)

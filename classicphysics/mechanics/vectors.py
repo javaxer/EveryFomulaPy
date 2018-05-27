@@ -19,8 +19,7 @@ class CoordinateSystem:         #평면 극 좌표계(Plane polar coordinates)(r
 
 #백터와 스칼라량에 대한 클래스
 class vector:
-    x,y,z=0
-    xi,yi,zi=0
+
     setvector(self,x,y,z):
         self.x = x
         self.y = y
