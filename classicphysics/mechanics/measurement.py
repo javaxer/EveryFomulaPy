@@ -154,6 +154,11 @@ class DimensionalAnalysis:
     #차원 분석에 대한 클래스, 현시점에서는 검증용 외에는 별다른 용도가 없으므로 일단 통과하자
     pass
 
-class ConversionOfUnits:
+#각도에 대한 개체
+class Angle(Standard):
+    __init__(self,degree=0,unit='deg'):
+
+
+def conversion_units():
     #단위 환산에 대한 내용, 일단 이 부분도 패스(SI단위만 사용할 거니까)
     pass

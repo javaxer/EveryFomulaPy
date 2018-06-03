@@ -6,6 +6,7 @@ import classicphysics.mechanics.vectors as ve
 class Vector_Test(unittest.TestCase):
 
     def test_get_definition(self):
+
         v1 = ve.CoordinateSystem(1,1)
         #v1.get_coordinate()
 
