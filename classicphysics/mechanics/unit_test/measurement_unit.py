@@ -40,24 +40,26 @@ class Measurement_Standard_Test(unittest.TestCase):
         길이1.정의()
         질량1 = measurement.질량(10,'kg')
         질량1.정의()
+        print("-------------")
 
     def test_angle(self):
         angle1 = measurement.Angle()
         angle2 = measurement.Angle(10,'deg')
-        #self.assertEqual(0,angle1.get(),"angle1 각도는 0도")
-        #self.assertEqual(10,angle2.get(),"angle2의 각도는 10도")
+        self.assertEqual(0,angle1.get(),"angle1 각도는 0도")
+        self.assertEqual(10,angle2.get(),"angle2의 각도는 10도")
+        print("-------------")
+
+    def test_volume(self):
+        len1= measurement.Length(10,'m')
+        vol1 = measurement.Volume()
+        print(vol1.get())
+        vol2= measurement.Volume(10,'m^3')
+        vol3.get_square_volume(len1)
 
 if __name__=='__main__':
     unittest.main()
 
 
-'''
-mass1 = measurement.Mass(0.0)
-mass1.get_definition()
-mass1.set(10.0)
-print(mass1.get(),'kg')
 
-vol1 = measurement.Volume()
-print(vol1.get())
-vol1.get_square_volume(len1)
-'''
+
+

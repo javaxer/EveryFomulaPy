@@ -157,11 +157,11 @@ class DimensionalAnalysis:
 #각도에 대한 개체
 class Angle(Standard):
     def __init__(self,degree=0,unit='deg'):
-        self.number = degree
+        self.standard = degree
         self.unit = unit
 
     def get_definition(self):
-        print("1도란 원(圓)을 360개로 나는 것 중 하나이다.")
+        print("1도란 1회전의 360등분이다. 혹은 pi/180 라디안이다.")
 
 def conversion_units():
     #단위 환산에 대한 내용, 일단 이 부분도 패스(SI단위만 사용할 거니까)
