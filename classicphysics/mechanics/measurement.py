@@ -39,9 +39,18 @@ class Standard:
     def get_unit(self):
         return self.unit
 
+    #단위가 서로 일치 하지 않을 경우에 대한 예외 처리
+    class UnitException(Exception):
+        print("단위가 서로 불일치 합니다.")
+        pass
+
     #합성에 대한 정의 __add__
     def __add__(self, other):
-        pass
+        if self.get_unit() != other.get_unit():
+            raise UnitException()
+        else add_result = self.get()+other.get()
+
+        return self.add_result
 
     #기본 출력 형태는 양+단위 형태이다.
     def __str__(self):
@@ -122,17 +131,18 @@ class 길이(Time):
         self.get()
 
 
-
+#부피에 대한 정의, 기초적인 산수 영역이나 아래의 밀도에 대한 정의를 위해 추가한다.
 class Volume(Standard):
-    #부피에 대한 정의, 기초적인 산수 영역이나 아래의 밀도에 대한 정의를 위해 추가한다.
 
-    #정육면체의 부피에 대한 공식
-    def get_square_volume(self,length):
-        return math.pow(length.get(),3)
+#정육면체의 부피에 대한 공식
+def set_square_volume(length_x,unit):
+    square_volume = Volume(math.pow(length_x.get(),3),unit)
+    return square_volume
 
-    # 직육면체에 부피에 대한 공식
-    def get_rectengular_volume(self,length_x, length_y, length_z):
-        return length_x*length_y*length_z
+# 직육면체에 부피에 대한 공식
+def set_rectengular_volume(length_x, length_y, length_z,unit):
+    rectengular_volume = Volume(length_x*length_y*length_z,unit)
+    return rectengular_volume
 
 class 부피(Volume):
     def 설정(self,number):
@@ -142,13 +152,14 @@ class 부피(Volume):
     def 직육면체부피(self,length):
         self.get()
 
-class Density:
-    def getdensity(self, mass, volume):
-        return mass/volume
+#밀도를 저장하기 위한 개체 클래스
+class Density(Standard):
+
+def get_density(self, mass, volume,unit):
+    density = mass.get()/volume.get()
+    return Density(density,unit)
 
 class 밀도(Density):
-    def 획득(self,mass, volume):
-        return self.getdensity(mass,volume)
 
 class DimensionalAnalysis:
     #차원 분석에 대한 클래스, 현시점에서는 검증용 외에는 별다른 용도가 없으므로 일단 통과하자
