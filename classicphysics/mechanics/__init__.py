@@ -6,6 +6,6 @@
 
 #사용된 공식들은 '위키' 홈페이지와 '파인만의 물리학 강의' 내용을 참조하여 작성했다
 
-__all__ = ['measurement','newton','vector','motion_1D','motion_2D']
+__all__ = ['measurement', 'law_of_motion.py', 'vector', 'motion_1D', 'motion_2D']
 
 #패키지내 모든 모듈 import

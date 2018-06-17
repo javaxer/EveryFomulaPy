@@ -53,7 +53,7 @@ class Speed_1D:
 
 #1차원에서의 등가속도 운동
 
-#시간의 함수로 나타낸 속ㄷ
+#시간의 함수로 나타낸 속도
 def v_f(v_xi : Velocity_1D, a_x : Velocity_1D, time : meas.Time ):
     try:
         v_f = v_xi.get() + a_x.get()*time.get()
